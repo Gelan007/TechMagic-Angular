@@ -9,9 +9,9 @@ export class Tag implements ITag {
   name: string
   color: string
 
-  constructor(title: string, description: string) {
+  constructor(name: string, color: string, ) {
     this.id = null
-    this.name = title
-    this.color = description
+    this.name = name
+    this.color = color
   }
 }

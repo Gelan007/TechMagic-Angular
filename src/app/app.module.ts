@@ -10,6 +10,8 @@ import { TagListComponent } from './components/tag/tag-list/tag-list.component';
 import { TagEditComponent } from './components/tag/tag-edit/tag-edit.component';
 import {CommonModule} from "@angular/common";
 import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import { ProductCardComponent } from './components/product/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,15 @@ import {FormsModule} from "@angular/forms";
     ProductListComponent,
     TagManagementComponent,
     TagListComponent,
-    TagEditComponent
+    TagEditComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, AppRoutingModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
