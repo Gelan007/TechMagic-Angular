@@ -1,0 +1,10 @@
+<div>
+  <h3>Edit Tag</h3>
+  <label for="tagName">Name:</label>
+  <input [(ngModel)]="tag.name" id="tagName" />
+
+  <label for="tagColor">Color:</label>
+  <input [(ngModel)]="tag.color" id="tagColor" />
+
+  <button (click)="saveTag()">Save</button>
+</div>
