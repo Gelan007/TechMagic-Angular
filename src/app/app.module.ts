@@ -13,6 +13,7 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { ProductCardComponent } from './components/product/product-card/product-card.component';
 import { ButtonBlueComponent } from './components/UI/buttons/button-blue/button-blue.component';
+import { TagViewComponent } from './components/tag/tag-view/tag-view.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ButtonBlueComponent } from './components/UI/buttons/button-blue/button-
     TagListComponent,
     TagEditComponent,
     ProductCardComponent,
-    ButtonBlueComponent
+    ButtonBlueComponent,
+    TagViewComponent
   ],
   imports: [
     BrowserModule,
