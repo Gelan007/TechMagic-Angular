@@ -41,6 +41,9 @@
   }
   &__description {
     font-size: 18px;
+    & span {
+      font-style: italic;
+    }
   }
   &__img {
     position: relative;

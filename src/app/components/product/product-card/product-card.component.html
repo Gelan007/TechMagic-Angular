@@ -3,7 +3,7 @@
     <div class="product-card__content">
       <h3 class="product-card__title">{{product.name}}</h3>
       <div class="product-card__price">Price: <span>{{product.price | currency}}</span></div>
-      <div class="product-card__description">Description: {{ product.description.length > 150 ? (product.description | slice:0:150) + '...' : product.description }}</div>
+      <div class="product-card__description">Description: <span>{{ product.description.length > 150 ? (product.description | slice:0:150) + '...' : product.description }}</span></div>
     </div>
     <div class="product-card__img">
       <img [src]="product.img" [alt]="product.name">

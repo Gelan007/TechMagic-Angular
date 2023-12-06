@@ -1,1 +1,11 @@
-<p *ngIf="product">{{product.id}}</p>
+<div class="product-detail" *ngIf="product">
+  <div class="content">
+    <h3 class="content__title">{{product.name}}</h3>
+    <div class="content__description"><b>Description: </b> <span>{{product.description}}</span></div>
+    <div class="content__price"><b>Price: </b> <span>{{product.price | currency}}</span></div>
+    <div class="content__button"><app-button-blue [buttonText]="'Back'"></app-button-blue></div>
+  </div>
+  <div class="picture">
+    <img [src]="product.img" [alt]="product.name">
+  </div>
+</div>

@@ -1,0 +1,37 @@
+.product-detail {
+  display: flex;
+  &>* {
+    margin: 0 5px;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  &__title {
+    font-size: 30px;
+    margin: 10px 0 30px 0;
+    text-align: center;
+  }
+  &__description {
+    line-height: 135%;
+    margin-bottom: 15px;
+  }
+  &__price {
+    & span {
+      color: teal;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+ &__button {
+   width: 12%;
+   margin-top: auto;
+ }
+}
+
+.picture {
+  & img {
+    max-width: 100% ;
+  }
+}
