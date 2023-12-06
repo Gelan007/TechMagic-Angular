@@ -1,13 +1,15 @@
 <div class="product-detail" *ngIf="product">
-  <div class="content">
-    <h3 class="content__title">{{product.name}}</h3>
-    <div class="content__description"><b>Description: </b> <span>{{product.description}}</span></div>
-    <div class="content__price"><b>Price: </b> <span>{{product.price | currency}}</span></div>
-    <div class="content__button">
-      <app-button-blue [buttonText]="'Back'" (click)="navigateToProductList()"></app-button-blue>
+  <div class="product-detail__main-content">
+    <div class="content">
+      <h3 class="content__title">{{product.name}}</h3>
+      <div class="content__description"><b>Description: </b> <span>{{product.description}}</span></div>
+      <div class="content__price"><b>Price: </b> <span>{{product.price | currency}}</span></div>
+    </div>
+    <div class="picture">
+      <img [src]="product.img" [alt]="product.name">
     </div>
   </div>
-  <div class="picture">
-    <img [src]="product.img" [alt]="product.name">
+  <div class="product-detail__button">
+    <app-button-blue [buttonText]="'Back'" (click)="navigateToProductList()"></app-button-blue>
   </div>
 </div>

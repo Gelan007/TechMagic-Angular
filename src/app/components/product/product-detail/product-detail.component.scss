@@ -1,7 +1,13 @@
 .product-detail {
-  display: flex;
-  &>* {
-    margin: 0 5px;
+  &__main-content {
+    display: flex;
+    &>* {
+      margin: 0 5px;
+    }
+  }
+  &__button {
+    width: 120px;
+    margin-top: 30px;
   }
 }
 .content {
@@ -25,15 +31,11 @@
       font-weight: bold;
     }
   }
- &__button {
-   width: 120px;
-   margin-top: auto;
- }
 }
 
 .picture {
   flex: 0 1 45%;
   & img {
-    max-width: 100% ;
+    max-width: 100%;
   }
 }
