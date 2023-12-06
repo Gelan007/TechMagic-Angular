@@ -7,8 +7,8 @@ import {TagsService} from "../../../services/tags.service";
   templateUrl: './tag-management.component.html',
   styleUrl: './tag-management.component.scss'
 })
-export class TagManagementComponent implements OnInit{
-  public tags!: ITag[];
+export class TagManagementComponent {
+/*  public tags!: ITag[];
   public editingTag: ITag | null = null;
 
   constructor(private tagService: TagsService) {}
@@ -34,5 +34,5 @@ export class TagManagementComponent implements OnInit{
       // Создание нового тега
       this.tagService.createTag(updatedTag);
     }
-  }
+  }*/
 }

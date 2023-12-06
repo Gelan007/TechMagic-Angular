@@ -1,6 +1,6 @@
 <div>
   <h3>Tag List</h3>
-  <div *ngFor="let tag of tags">
+  <div *ngFor="let tag of tags$ | async">
     <span [style.backgroundColor]="tag.color">{{ tag.name }}</span>
     <button (click)="editTag(tag)">Edit</button>
     <button (click)="deleteTag(tag)">Delete</button>
