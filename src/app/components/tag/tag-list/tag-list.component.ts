@@ -3,6 +3,7 @@ import {ProductsService} from "../../../services/products.service";
 import {TagsService} from "../../../services/tags.service";
 import {IProduct} from "../../product/product.model";
 import {ITag} from "../tag.model";
+import {Observable} from "rxjs";
 
 
 @Component({
@@ -11,7 +12,7 @@ import {ITag} from "../tag.model";
   styleUrls: ['./tag-list.component.scss'],
 })
 export class TagListComponent implements OnInit {
-  public products$ = this.productsService.getProducts();
+  public products$: Observable<IProduct[]> = this.productsService.products$
 
   constructor(private productsService: ProductsService, private tagsService: TagsService) {}
 
@@ -27,6 +28,6 @@ export class TagListComponent implements OnInit {
   }
 
   deleteTag(tag: ITag): void {
-    this.tagsService.deleteTag(tag);
+    this.productsService.deleteTag(tag);
   }
 }

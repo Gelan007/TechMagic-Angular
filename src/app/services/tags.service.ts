@@ -1,4 +1,4 @@
-import {BehaviorSubject} from "rxjs";
+import {BehaviorSubject, map} from "rxjs";
 import {ITag} from "../components/tag/tag.model";
 import {Injectable} from "@angular/core";
 
@@ -37,4 +37,5 @@ export class TagsService {
     const filteredTags = tags.filter((t) => t.name !== tag.name);
     this._tagsSubject.next(filteredTags);
   }
+
 }

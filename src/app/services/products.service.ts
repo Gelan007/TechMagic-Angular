@@ -5,6 +5,7 @@ import {catchError, tap} from "rxjs/operators";
 import {IProduct} from "../components/product/product.model";
 import {ITag} from "../components/tag/tag.model";
 import {log} from "@angular-devkit/build-angular/src/builders/ssr-dev-server";
+import {UUID} from "angular2-uuid";
 
 
 @Injectable({
@@ -20,7 +21,7 @@ export class ProductsService {
 
   public getProducts(): Observable<IProduct[]> {
     this.http.get<IProduct[]>(this.apiUrl).subscribe((products: IProduct[]) => {
-        this._productsSubject.next(products);
+        this._productsSubject.next(this.getProductsWithTagsId(products));
       },
       (error) => {
         console.error('Error fetching products:', error);
@@ -47,6 +48,32 @@ export class ProductsService {
           this._productsSubject.next(products);
         })
       );*/
+  }
+
+  public deleteTag(tag: ITag) {
+    // Фильтруем массив тегов внутри продукта
+    const products = this._productsSubject.value;
+    const updatedProducts = products.map(product => ({
+      ...product,
+      tags: product.tags?.filter(t => t.id !== tag.id) || []
+    }));
+    this._productsSubject.next(updatedProducts);
+  }
+
+  private getProductsWithTagsId(products: IProduct[]): IProduct[] {
+    const productsWithTagsId: IProduct[] = products.map((product: IProduct) => {
+      const tagsWithId: ITag[] | undefined = product.tags?.map((tag: ITag) => ({
+        ...tag,
+        id: UUID.UUID()
+      })) ?? [];
+
+      return {
+        ...product,
+        tags: tagsWithId
+      };
+    });
+
+    return productsWithTagsId;
   }
 
   /*getArticle(id: number): Observable<IProduct> {
