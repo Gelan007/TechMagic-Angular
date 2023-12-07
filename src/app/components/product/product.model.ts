@@ -17,8 +17,8 @@ export class Product implements IProduct {
   img: string
   tags: Array<ITag> | null
 
-  constructor(id: number, name: string, description: string, price: number, img: string, tags: Array<ITag> | null) {
-    this.id = id
+  constructor(name: string, description: string, price: number, img: string, tags: Array<ITag> | null) {
+    this.id = Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)
     this.name = name
     this.description = description
     this.price = price

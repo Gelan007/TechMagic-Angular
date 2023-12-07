@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {map, Observable, of} from "rxjs";
+import {BehaviorSubject, map, Observable, of} from "rxjs";
 import {catchError, tap} from "rxjs/operators";
 import {IProduct} from "../components/product/product.model";
+import {ITag} from "../components/tag/tag.model";
+import {log} from "@angular-devkit/build-angular/src/builders/ssr-dev-server";
 
 
 @Injectable({
@@ -11,15 +13,40 @@ import {IProduct} from "../components/product/product.model";
 export class ProductsService {
 
   private apiUrl = '../assets/products.json';
+  private _productsSubject = new BehaviorSubject<IProduct[]>([]);
+  products$ = this._productsSubject.asObservable();
 
   constructor(private http: HttpClient) {}
 
   public getProducts(): Observable<IProduct[]> {
-    return this.http.get<IProduct[]>(this.apiUrl)
+    this.http.get<IProduct[]>(this.apiUrl).subscribe((products: IProduct[]) => {
+        this._productsSubject.next(products);
+      },
+      (error) => {
+        console.error('Error fetching products:', error);
+      })
+    return this.products$
   }
 
   public getProduct(id: number): Observable<IProduct | undefined> {
     return this.getProducts().pipe(map(products => products.find(product => product.id === id)))
+  }
+
+  /*public addProduct(product: IProduct): Observable<IProduct> {
+    //return this.http.post<IProduct>(this.apiUrl, product)
+
+  }*/
+  public addProduct(product: IProduct): void {
+    const currentProducts = this._productsSubject.value;
+    currentProducts.push(product);
+    this._productsSubject.next(currentProducts);
+   /* return this.getProducts()
+      .pipe(
+        tap(products => {
+          products.push(product);
+          this._productsSubject.next(products);
+        })
+      );*/
   }
 
   /*getArticle(id: number): Observable<IProduct> {

@@ -3,6 +3,41 @@
     <div class="tag-management" (click)="navigateToTagManagement()">
       Manage tags
     </div>
+    <div class="product-creation">
+      <div class="product-creation__form">
+        <div class="product-creation__left-block">
+          <label for="productName">Name: </label>
+          <input [(ngModel)]="newProduct.name" id="productName"/>
+
+          <label for="productDescription">Description: </label>
+          <input [(ngModel)]="newProduct.description" id="productDescription"/>
+
+          <label for="productPrice">Price: </label>
+          <input [(ngModel)]="newProduct.price" id="productPrice"/>
+
+          <label for="productImg">Image: </label>
+          <input [(ngModel)]="newProduct.img" id="productImg"/>
+        </div>
+        <div class="product-creation__right-block" >
+          <div class="product-creation__right-block-item" *ngFor="let tag of tagsForProduct">
+            <label for="tag-name">Tag name: </label>
+            <input [(ngModel)]="tag.name" id="tag-name"/>
+
+            <label for="tag-color">Tag color: {{tag.color}}</label>
+            <input [(ngModel)]="tag.color" id="tag-color" type="color"/>
+          </div>
+        </div>
+      </div>
+      <div class="product-creation__buttons">
+        <div class="product-creation__button">
+          <app-button-green (click)="addProduct()" [buttonText]="'Create product'"></app-button-green>
+        </div>
+        <div class="product-creation__tag-button">
+          <app-button-green (click)="addTagForProduct()" [buttonText]="'Add tag'"></app-button-green>
+        </div>
+      </div>
+    </div>
+
   </div>
   <div class="product-main__main-block">
     <app-product-list></app-product-list>
