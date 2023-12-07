@@ -15,6 +15,7 @@ import { ProductCardComponent } from './components/product/product-card/product-
 import { ButtonBlueComponent } from './components/UI/buttons/button-blue/button-blue.component';
 import { TagViewComponent } from './components/tag/tag-view/tag-view.component';
 import { ProductMainComponent } from './components/product/product-main/product-main.component';
+import { ButtonGreenComponent } from './components/UI/buttons/button-green/button-green.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ProductMainComponent } from './components/product/product-main/product-
     ProductCardComponent,
     ButtonBlueComponent,
     TagViewComponent,
-    ProductMainComponent
+    ProductMainComponent,
+    ButtonGreenComponent
   ],
   imports: [
     BrowserModule,

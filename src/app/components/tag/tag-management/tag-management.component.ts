@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ITag, Tag} from "../tag.model";
 import {TagsService} from "../../../services/tags.service";
+import {ActivatedRoute, Router} from "@angular/router";
+import {ProductsService} from "../../../services/products.service";
 
 @Component({
   selector: 'app-tag-management',
@@ -8,6 +10,12 @@ import {TagsService} from "../../../services/tags.service";
   styleUrl: './tag-management.component.scss'
 })
 export class TagManagementComponent {
+
+  constructor(private router: Router) {}
+
+  public navigateToProductList(): void {
+    this.router.navigate([''])
+  }
 /*  public tags!: ITag[];
   public editingTag: ITag | null = null;
 

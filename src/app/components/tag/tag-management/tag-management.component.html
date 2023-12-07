@@ -1,5 +1,8 @@
-<div>
-  <h2>Tag Management</h2>
-  <app-tag-list></app-tag-list>
+<div class="tag-management">
+  <h2 class="tag-management__title">Tag Management</h2>
+  <div class="button-back">
+    <app-button-blue [buttonText]="'Back'" (click)="navigateToProductList()"></app-button-blue>
+  </div>
   <app-tag-edit></app-tag-edit>
+  <app-tag-list></app-tag-list>
 </div>

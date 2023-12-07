@@ -1,10 +1,18 @@
-<div>
-  <h3>Edit Tag</h3>
-  <label for="tagName">Name:</label>
-  <input [(ngModel)]="editingTag.name" id="tagName" *ngIf="editingTag"/>
-
-  <label for="tagColor">Color:</label>
-  <input [(ngModel)]="editingTag.color" id="tagColor" *ngIf="editingTag"/>
-
-  <button (click)="saveTag()">Save</button>
+<div *ngIf="editingTag" class="tag-edit">
+  <h3 class="tag-edit__title">Edit Tag</h3>
+  <div class="tag-edit__container">
+    <div class="tag-edit__form">
+      <div class="tag-edit__name">
+        <label for="tagName">Name:</label>
+        <input [(ngModel)]="editingTag.name" id="tagName" *ngIf="editingTag"/>
+      </div>
+      <div class="tag-edit__color">
+        <label for="tagColor">Color: {{editingTag.color}}</label>
+        <input [(ngModel)]="editingTag.color" id="tagColor" *ngIf="editingTag" type="color"/>
+      </div>
+    </div>
+    <div class="tag-edit__button">
+      <app-button-green (click)="saveTag()" [buttonText]="'Save'"></app-button-green>
+    </div>
+  </div>
 </div>

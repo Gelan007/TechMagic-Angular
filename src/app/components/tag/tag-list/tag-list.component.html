@@ -1,14 +1,20 @@
 <div class="tag-list">
   <h3 class="tag-list__title">Tag List</h3>
-  <div *ngFor="let product of products$ | async" class="tag-list__container">
-    <div class="product-title">
-      <strong class="product-title__id">{{product.id}}</strong>
-      <h4 class="product-title__text">{{product.name}}</h4>
-    </div>
-    <div class="product-tags" *ngFor="let tag of product.tags">
-      <app-tag-view [color]="tag.color" [text]="tag.name"></app-tag-view>
-      <button (click)="editTag(tag)">Edit</button>
-      <button (click)="deleteTag(tag)">Delete</button>
+  <div class="tag-list__container">
+    <div class="tag-list__item" *ngFor="let product of products$ | async">
+      <div class="product-title">
+        <strong class="product-title__id">{{product.id}}</strong>
+        <h4 class="product-title__text">{{product.name}}</h4>
+      </div>
+      <div class="product-tags">
+        <div class="product-tags__item" *ngFor="let tag of product.tags">
+          <app-tag-view [color]="tag.color" [text]="tag.name"></app-tag-view>
+          <div class="product-tags__buttons">
+            <button (click)="editTag(tag)" class="button-reset edit-button">Edit</button>
+            <button (click)="deleteTag(tag)" class="button-reset delete-button">Delete</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
