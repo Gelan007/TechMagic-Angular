@@ -14,6 +14,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { ProductCardComponent } from './components/product/product-card/product-card.component';
 import { ButtonBlueComponent } from './components/UI/buttons/button-blue/button-blue.component';
 import { TagViewComponent } from './components/tag/tag-view/tag-view.component';
+import { ProductMainComponent } from './components/product/product-main/product-main.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TagViewComponent } from './components/tag/tag-view/tag-view.component';
     TagEditComponent,
     ProductCardComponent,
     ButtonBlueComponent,
-    TagViewComponent
+    TagViewComponent,
+    ProductMainComponent
   ],
   imports: [
     BrowserModule,

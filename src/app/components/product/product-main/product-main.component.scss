@@ -1,0 +1,15 @@
+.product-main {
+  &__top-block {
+    padding: 15px 10px 30px 15px;
+  }
+}
+
+.tag-management {
+  color: #577399;
+  cursor: pointer;
+  font-size: 20px;
+  &:hover {
+    text-decoration: underline;
+    color: #3d6d8d;
+  }
+}
