@@ -32,6 +32,14 @@
       cursor: pointer;
     }
   }
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    &>* {
+      margin: 2px;
+    }
+  }
   &__price {
     font-size: 18px;
     & span {

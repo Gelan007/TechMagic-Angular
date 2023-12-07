@@ -265,7 +265,7 @@
       },
       {
         "name": "Intel",
-        "color": "rgb(255, 255, 0)"
+        "color": "rgb(255, 69, 0)"
       },
       {
         "name": "SSD",
@@ -356,7 +356,7 @@
       },
       {
         "name": "Intel",
-        "color": "rgb(255, 255, 0)"
+        "color": "rgb(255, 69, 0)"
       },
       {
         "name": "NVIDIA",
