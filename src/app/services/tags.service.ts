@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import {BehaviorSubject} from "rxjs";
 import {ITag} from "../components/tag/tag.model";
+import {Injectable} from "@angular/core";
 
 @Injectable({
   providedIn: 'root',
@@ -11,12 +11,9 @@ export class TagsService {
   private _editingTagSubject = new BehaviorSubject<ITag | null>(null);
   editingTag$ = this._editingTagSubject.asObservable();
 
-  loadTags() {
-    // Simulate loading tags from a server
-    const tags: ITag[] = [
-      { id: 1, name: 'laptops', color: 'blue' },
-      { id: 2, name: 'iphone', color: 'red' },
-    ];
+  constructor() {}
+
+  loadTags(tags: ITag[]) {
     this._tagsSubject.next(tags);
   }
 
@@ -26,7 +23,7 @@ export class TagsService {
 
   updateTag(updatedTag: ITag) {
     const tags = this._tagsSubject.value;
-    const index = tags.findIndex((tag) => tag.id === updatedTag.id);
+    const index = tags.findIndex((tag) => tag.name === updatedTag.name);
 
     if (index !== -1) {
       tags[index] = updatedTag;
@@ -37,7 +34,7 @@ export class TagsService {
 
   deleteTag(tag: ITag) {
     const tags = this._tagsSubject.value;
-    const filteredTags = tags.filter((t) => t.id !== tag.id);
+    const filteredTags = tags.filter((t) => t.name !== tag.name);
     this._tagsSubject.next(filteredTags);
   }
 }

@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import {ITag} from "../tag.model";
+import {Component, OnInit} from "@angular/core";
+import {ProductsService} from "../../../services/products.service";
 import {TagsService} from "../../../services/tags.service";
+import {IProduct} from "../../product/product.model";
+import {ITag} from "../tag.model";
+
 
 @Component({
   selector: 'app-tag-list',
@@ -8,19 +11,22 @@ import {TagsService} from "../../../services/tags.service";
   styleUrls: ['./tag-list.component.scss'],
 })
 export class TagListComponent implements OnInit {
-  public tags$ = this.tagsService.tags$;
+  public products$ = this.productsService.getProducts();
 
-  constructor(private tagsService: TagsService) {}
+  constructor(private productsService: ProductsService, private tagsService: TagsService) {}
 
-  public ngOnInit() {
-    this.tagsService.loadTags();
+  ngOnInit(): void {
+    this.productsService.getProducts().subscribe((products: IProduct[]) => {
+      const tags: ITag[] = products.flatMap((product) => product.tags || []);
+      this.tagsService.loadTags(tags);
+    });
   }
 
-  public editTag(tag: ITag) {
+  editTag(tag: ITag): void {
     this.tagsService.editTag(tag);
   }
 
-  public deleteTag(tag: ITag) {
+  deleteTag(tag: ITag): void {
     this.tagsService.deleteTag(tag);
   }
 }
