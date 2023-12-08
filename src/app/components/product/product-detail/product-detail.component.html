@@ -2,6 +2,11 @@
   <div class="product-detail__main-content">
     <div class="content">
       <h3 class="content__title">{{product.name}}</h3>
+      <div class="content__tag">
+        <div class="content__tag-container" *ngFor="let tag of product.tags">
+          <app-tag-view [text]="tag.name" [color]="tag.color"></app-tag-view>
+        </div>
+      </div>
       <div class="content__description"><b>Description: </b> <span>{{product.description}}</span></div>
       <div class="content__price"><b>Price: </b> <span>{{product.price | currency}}</span></div>
     </div>
