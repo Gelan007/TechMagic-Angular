@@ -24,4 +24,11 @@ export class ProductDetailComponent implements OnInit {
     this.router.navigate([''])
   }
 
+  public deleteProduct(): void {
+    if(this.product) {
+      this.navigateToProductList()
+      this.productService.deleteProduct(this.product.id)
+    }
+  }
+
 }

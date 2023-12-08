@@ -9,6 +9,9 @@
       </div>
       <div class="content__description"><b>Description: </b> <span>{{product.description}}</span></div>
       <div class="content__price"><b>Price: </b> <span>{{product.price | currency}}</span></div>
+      <div class="button-red">
+        <app-button-red [buttonText]="'Delete product'" (click)="deleteProduct()"></app-button-red>
+      </div>
     </div>
     <div class="picture">
       <img [src]="product.img" [alt]="product.name">

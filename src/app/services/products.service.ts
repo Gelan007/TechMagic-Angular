@@ -50,7 +50,7 @@ export class ProductsService {
       );*/
   }
 
-  public deleteTag(tag: ITag) {
+  public deleteTag(tag: ITag): void {
     const products = this._productsSubject.value;
     const updatedProducts = products.map(product => ({
       ...product,
@@ -59,7 +59,7 @@ export class ProductsService {
     this._productsSubject.next(updatedProducts);
   }
 
-  public addNewTagToProduct(tag: ITag, productId: number) {
+  public addNewTagToProduct(tag: ITag, productId: number): void {
     const products = this._productsSubject.value;
     const updatedProducts = products.map(product => {
       if (product.id === productId) {
@@ -88,6 +88,14 @@ export class ProductsService {
 
     return productsWithTagsId;
   }
+
+  public deleteProduct(id: number): void {
+    const products = this._productsSubject.value;
+    const updatedProducts = products.filter(product => product.id !== id)
+    this._productsSubject.next(updatedProducts);
+  }
+
+
 
   /*getArticle(id: number): Observable<IProduct> {
     return this.getArticles()

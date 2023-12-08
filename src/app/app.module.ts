@@ -16,6 +16,7 @@ import { ButtonBlueComponent } from './components/UI/buttons/button-blue/button-
 import { TagViewComponent } from './components/tag/tag-view/tag-view.component';
 import { ProductMainComponent } from './components/product/product-main/product-main.component';
 import { ButtonGreenComponent } from './components/UI/buttons/button-green/button-green.component';
+import { ButtonRedComponent } from './components/UI/buttons/button-red/button-red.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ButtonGreenComponent } from './components/UI/buttons/button-green/butto
     ButtonBlueComponent,
     TagViewComponent,
     ProductMainComponent,
-    ButtonGreenComponent
+    ButtonGreenComponent,
+    ButtonRedComponent
   ],
   imports: [
     BrowserModule,
