@@ -2,7 +2,7 @@ import {Component, OnInit} from "@angular/core";
 import {ProductsService} from "../../../services/products.service";
 import {TagsService} from "../../../services/tags.service";
 import {IProduct} from "../../product/product.model";
-import {ITag} from "../tag.model";
+import {ITag, Tag} from "../tag.model";
 import {Observable} from "rxjs";
 
 
@@ -13,7 +13,7 @@ import {Observable} from "rxjs";
 })
 export class TagListComponent implements OnInit {
   public products$: Observable<IProduct[]> = this.productsService.products$
-
+  public tag: ITag = new Tag('', '')
   constructor(private productsService: ProductsService, private tagsService: TagsService) {}
 
   ngOnInit(): void {
@@ -30,4 +30,10 @@ export class TagListComponent implements OnInit {
   deleteTag(tag: ITag): void {
     this.productsService.deleteTag(tag);
   }
+
+  public addTagForProduct(productId: number): void {
+    this.productsService.addNewTagToProduct(this.tag, productId)
+    this.tag = new Tag('', '')
+  }
+
 }

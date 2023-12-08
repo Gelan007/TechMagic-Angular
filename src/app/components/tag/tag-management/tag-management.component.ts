@@ -10,12 +10,13 @@ import {ProductsService} from "../../../services/products.service";
   styleUrl: './tag-management.component.scss'
 })
 export class TagManagementComponent {
-
   constructor(private router: Router) {}
 
   public navigateToProductList(): void {
     this.router.navigate([''])
   }
+
+
 /*  public tags!: ITag[];
   public editingTag: ITag | null = null;
 

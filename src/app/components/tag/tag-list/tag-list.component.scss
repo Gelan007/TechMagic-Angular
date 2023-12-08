@@ -53,3 +53,12 @@
   color: red;
 }
 
+.tag-creation {
+  margin-bottom: 30px;
+
+  &__item {
+    &>*:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}

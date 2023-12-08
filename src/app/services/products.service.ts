@@ -51,12 +51,25 @@ export class ProductsService {
   }
 
   public deleteTag(tag: ITag) {
-    // Фильтруем массив тегов внутри продукта
     const products = this._productsSubject.value;
     const updatedProducts = products.map(product => ({
       ...product,
       tags: product.tags?.filter(t => t.id !== tag.id) || []
     }));
+    this._productsSubject.next(updatedProducts);
+  }
+
+  public addNewTagToProduct(tag: ITag, productId: number) {
+    const products = this._productsSubject.value;
+    const updatedProducts = products.map(product => {
+      if (product.id === productId) {
+        return {
+          ...product,
+          tags: [...(product.tags || []), tag]
+        };
+      }
+      return product;
+    });
     this._productsSubject.next(updatedProducts);
   }
 

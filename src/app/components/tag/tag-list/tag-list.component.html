@@ -1,5 +1,17 @@
 <div class="tag-list">
   <h3 class="tag-list__title">Tag List</h3>
+  <div class="tag-creation" >
+    <div class="tag-creation__item">
+      <div class="tag-creation__name">
+        <label for="tag-name">Tag name: </label>
+        <input [(ngModel)]="tag.name" id="tag-name"/>
+      </div>
+      <div class="tag-creation__color">
+        <label for="tag-color">Tag color: {{tag.color}}</label>
+        <input [(ngModel)]="tag.color" id="tag-color" type="color"/>
+      </div>
+    </div>
+  </div>
   <div class="tag-list__container">
     <div class="tag-list__item" *ngFor="let product of products$ | async">
       <div class="product-title">
@@ -13,6 +25,9 @@
             <button (click)="editTag(tag)" class="button-reset edit-button">Edit</button>
             <button (click)="deleteTag(tag)" class="button-reset delete-button">Delete</button>
           </div>
+        </div>
+        <div class="button-tag-add" *ngIf="product && product.tags && product.tags.length < 6">
+          <app-button-green (click)="addTagForProduct(product.id)" [buttonText]="'Add tag'"></app-button-green>
         </div>
       </div>
     </div>
