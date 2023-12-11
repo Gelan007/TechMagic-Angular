@@ -8,7 +8,7 @@
         <div class="product-creation__left-block">
           <label for="productName">Name: </label>
           <input [(ngModel)]="newProduct.name" id="productName" name="productName" #name="ngModel" required minlength="3"/>
-          <div *ngIf="name.invalid && (name.dirty || name.touched)" class="form-errors">
+          <div *ngIf="name.invalid" class="form-errors">
             <div *ngIf="name.errors?.['required']" >Name is required.</div>
             <div *ngIf="name.errors?.['minlength']">
               Name must be at least 4 characters long.

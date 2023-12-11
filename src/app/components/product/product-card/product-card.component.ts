@@ -8,4 +8,5 @@ import {IProduct} from "../product.model";
 })
 export class ProductCardComponent {
   @Input() public product!: IProduct
+  public defaultImage: string = 'https://nautique.com.ua/wp-content/themes/nautique/img/default.jpg'
 }

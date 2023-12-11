@@ -9,7 +9,7 @@
       <div class="product-card__description">Description: <span>{{ product.description.length > 150 ? (product.description | slice:0:150) + '...' : product.description }}</span></div>
     </div>
     <div class="product-card__img">
-      <img [src]="product.img" [alt]="product.name">
+      <img [src]="product.img ? product.img : defaultImage" [alt]="product.name">
     </div>
   </div>
 </div>

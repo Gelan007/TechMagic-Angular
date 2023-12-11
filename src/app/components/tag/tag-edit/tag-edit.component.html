@@ -4,7 +4,7 @@
     <div class="tag-edit__form">
       <div class="tag-edit__name">
         <label for="tagName">Name:</label>
-        <input [(ngModel)]="editingTag.name" id="tagName" *ngIf="editingTag"/>
+        <input [(ngModel)]="editingTag.name" id="tagName" *ngIf="editingTag" maxlength="15"/>
       </div>
       <div class="tag-edit__color">
         <label for="tagColor">Color: {{editingTag.color}}</label>
