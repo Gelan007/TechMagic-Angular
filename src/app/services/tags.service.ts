@@ -38,4 +38,14 @@ export class TagsService {
     this._tagsSubject.next(filteredTags);
   }
 
+  public getUniqueTags(): ITag[] {
+    const tags = this._tagsSubject.value;
+    const uniqueTagsMap = new Map<string, ITag>();
+    tags.forEach(tag => {
+      uniqueTagsMap.set(tag.name, tag);
+    });
+    const uniqueTagsArray: ITag[] = Array.from(uniqueTagsMap.values());
+    return uniqueTagsArray;
+  }
+
 }

@@ -16,9 +16,6 @@ export class ProductMainComponent  {
   public newProduct:IProduct = new Product('', '', 0, '', this.tagsForProduct)
   constructor(private router: Router, private productService: ProductsService) {}
 
-  public ngOnInit(): void {
-
-  }
   /*public ngOnInit(): void {
     this.productService.getProducts().subscribe(products => {
       this.products = products

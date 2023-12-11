@@ -13,7 +13,7 @@ import {Observable} from "rxjs";
 })
 export class TagListComponent implements OnInit {
   public products$: Observable<IProduct[]> = this.productsService.products$
-  public tag: ITag = new Tag('', '')
+  public tag: ITag = new Tag('', 'blue')
   constructor(private productsService: ProductsService, private tagsService: TagsService) {}
 
   ngOnInit(): void {
