@@ -7,13 +7,22 @@
       <div class="product-creation__form">
         <div class="product-creation__left-block">
           <label for="productName">Name: </label>
-          <input [(ngModel)]="newProduct.name" id="productName"/>
+          <input [(ngModel)]="newProduct.name" id="productName" name="productName" #name="ngModel" required minlength="3"/>
+          <div *ngIf="name.invalid && (name.dirty || name.touched)" class="form-errors">
+            <div *ngIf="name.errors?.['required']" >Name is required.</div>
+            <div *ngIf="name.errors?.['minlength']">
+              Name must be at least 4 characters long.
+            </div>
+          </div>
 
           <label for="productDescription">Description: </label>
           <input [(ngModel)]="newProduct.description" id="productDescription"/>
 
           <label for="productPrice">Price: </label>
-          <input [(ngModel)]="newProduct.price" id="productPrice"/>
+          <input [(ngModel)]="newProduct.price" id="productPrice" #price="ngModel" required/>
+          <div *ngIf="price.invalid && (price.dirty || price.touched)" class="form-errors">
+            <div *ngIf="price.errors?.['required']" >Price is required.</div>
+          </div>
 
           <label for="productImg">Image: </label>
           <input [(ngModel)]="newProduct.img" id="productImg"/>
@@ -21,10 +30,13 @@
         <div class="product-creation__right-block" >
           <div class="product-creation__right-block-item" *ngFor="let tag of tagsForProduct">
             <label for="tag-name">Tag name: </label>
-            <input [(ngModel)]="tag.name" id="tag-name"/>
+            <input [(ngModel)]="tag.name" id="tag-name" #tagName="ngModel" required/>
 
             <label for="tag-color">Tag color: {{tag.color}}</label>
             <input [(ngModel)]="tag.color" id="tag-color" type="color"/>
+            <div *ngIf="tagName.invalid" class="form-errors">
+              <div *ngIf="tagName.errors?.['required']" >Tag name is required.</div>
+            </div>
           </div>
         </div>
       </div>

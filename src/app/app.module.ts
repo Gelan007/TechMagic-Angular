@@ -9,7 +9,7 @@ import { TagManagementComponent } from './components/tag/tag-management/tag-mana
 import { TagListComponent } from './components/tag/tag-list/tag-list.component';
 import { TagEditComponent } from './components/tag/tag-edit/tag-edit.component';
 import {CommonModule} from "@angular/common";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { ProductCardComponent } from './components/product/product-card/product-card.component';
 import { ButtonBlueComponent } from './components/UI/buttons/button-blue/button-blue.component';
@@ -38,6 +38,7 @@ import { ButtonRedComponent } from './components/UI/buttons/button-red/button-re
     AppRoutingModule, AppRoutingModule,
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],
