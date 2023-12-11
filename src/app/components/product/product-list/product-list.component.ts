@@ -23,6 +23,4 @@ export class ProductListComponent implements OnInit {
   public navigateToProduct(id: number): void {
     this.router.navigate(['product', id])
   }
-
-
 }

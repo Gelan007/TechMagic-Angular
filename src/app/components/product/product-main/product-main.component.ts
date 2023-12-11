@@ -37,12 +37,6 @@ export class ProductMainComponent  {
 
 
   public addProduct(): void {
-    /*const tagsForProduct: ITag[] = [new Tag('newTag', 'red'), new Tag('newTag2', 'green')]
-    const newProduct:IProduct = new Product(
-      'name', 'desc', 200,
-      'string', tagsForProduct
-    )*/
-
     if(this.newProduct.name.length >= 3 && this.newProduct.price >= 0) {
         const countOfValidTags = this.tagsForProduct.filter(p => !p.name)
         if(countOfValidTags.length === 0 || !countOfValidTags) {
@@ -51,8 +45,5 @@ export class ProductMainComponent  {
     } else {
       console.log('Form is invalid. Please check your input.');
     }
-      /*.subscribe(products => {
-      this.products = products
-    })*/
   }
 }
