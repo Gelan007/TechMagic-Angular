@@ -29,13 +29,18 @@
         </div>
         <div class="product-creation__right-block" >
           <div class="product-creation__right-block-item" *ngFor="let tag of tagsForProduct">
-            <label for="tag-name">Tag name: </label>
-            <input [(ngModel)]="tag.name" id="tag-name" #tagName="ngModel" required/>
-
-            <label for="tag-color">Tag color: {{tag.color}}</label>
-            <input [(ngModel)]="tag.color" id="tag-color" type="color"/>
-            <div *ngIf="tagName.invalid" class="form-errors">
-              <div *ngIf="tagName.errors?.['required']" >Tag name is required.</div>
+            <div class="product-creation__right-block-item__tag-name">
+              <div>
+                <label for="tag-name">Tag name: </label>
+                <input [(ngModel)]="tag.name" id="tag-name" #tagName="ngModel" required/>
+              </div>
+              <div *ngIf="tagName.invalid" class="form-errors">
+                <div *ngIf="tagName.errors?.['required']" >Tag name is required.</div>
+              </div>
+            </div>
+            <div class="product-creation__right-block-item__tag-color">
+              <label for="tag-color">Tag color: {{tag.color}}</label>
+              <input [(ngModel)]="tag.color" id="tag-color" type="color"/>
             </div>
           </div>
         </div>

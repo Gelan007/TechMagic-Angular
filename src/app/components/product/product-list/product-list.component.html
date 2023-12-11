@@ -1,18 +1,21 @@
 <div class="product-list">
-  <div class="filter">
-    <label for="tagFilter">Filter by Tag:</label>
-    <select id="tagFilter" [(ngModel)]="selectedTagName" (change)="filterAndGetProductsByTag()">
-      <option value="" disabled>Select Tag</option>
-      <option value="" selected>Show All Products</option>
-      <option *ngFor="let tag of uniqueTags" [ngValue]="tag.name">
-        {{tag.name}}
-      </option>
-    </select>
+  <div class="filtration-block">
+    <div class="filtration-block__filter">
+      <label for="tagFilter">Filter by Tag:</label>
+      <select id="tagFilter" [(ngModel)]="selectedTagName" (change)="filterAndGetProductsByTag()">
+        <option value="" disabled>Select Tag</option>
+        <option value="" selected>Show All Products</option>
+        <option *ngFor="let tag of uniqueTags" [ngValue]="tag.name">
+          {{tag.name}}
+        </option>
+      </select>
+    </div>
+    <div class="filtration-block__search">
+      <label for="productSearch">Search by Name:</label>
+      <input type="text" id="productSearch" [(ngModel)]="productNameFilter" (input)="filterAndGetProductsByTag()">
+    </div>
   </div>
-  <div class="search">
-    <label for="productSearch">Search by Name:</label>
-    <input type="text" id="productSearch" [(ngModel)]="productNameFilter" (input)="filterAndGetProductsByTag()">
-  </div>
+
   <div class="product-list__card">
     <app-product-card
       *ngFor="let product of filteredProducts"
