@@ -1,0 +1,23 @@
+.tag-edit {
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    &>*:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+  &__name {}
+  &__color {
+    & label {
+      margin-right: 4px;
+    }
+  }
+  &__button {
+    width: 100px;
+    margin-top: 10px;
+  }
+}

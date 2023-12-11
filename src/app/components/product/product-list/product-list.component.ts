@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductsService} from "../../../services/products.service";
-import {IProduct} from "../product.model";
+import {IProduct, Product} from "../product.model";
 import {Router} from "@angular/router";
+import {ITag, Tag} from "../../tag/tag.model";
 
 @Component({
   selector: 'app-product-list',
@@ -16,10 +17,10 @@ export class ProductListComponent implements OnInit {
     this.productService.getProducts().subscribe((products => {
       this.products = products
     }))
+
   }
 
   public navigateToProduct(id: number): void {
     this.router.navigate(['product', id])
   }
-
 }

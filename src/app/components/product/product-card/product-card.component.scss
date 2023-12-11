@@ -1,4 +1,5 @@
 .product-card {
+  height: 100%;
   &__item {
     background: #ffffff;
     display: flex;
@@ -29,6 +30,14 @@
       color: teal;
       text-decoration: underline;
       cursor: pointer;
+    }
+  }
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    &>* {
+      margin: 2px;
     }
   }
   &__price {

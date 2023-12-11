@@ -1,16 +1,28 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {ITag, Tag} from "../tag.model";
+import {TagsService} from "../../../services/tags.service";
+import {ITag} from "../tag.model";
+import {Component, OnInit} from "@angular/core";
+
 
 @Component({
   selector: 'app-tag-edit',
   templateUrl: './tag-edit.component.html',
-  styleUrl: './tag-edit.component.scss'
+  styleUrls: ['./tag-edit.component.scss'],
 })
-export class TagEditComponent {
-  @Input() public tag!: ITag;
-  @Output() private save: EventEmitter<ITag> = new EventEmitter<ITag>();
+export class TagEditComponent implements OnInit {
+  public editingTag: ITag | null | undefined;
 
-  public saveTag() {
-    this.save.emit(this.tag);
+  constructor(private tagsService: TagsService) {}
+
+  ngOnInit(): void {
+    this.tagsService.editingTag$.subscribe((tag) => {
+      this.editingTag = tag;
+    });
+  }
+
+  saveTag(): void {
+    if (this.editingTag) {
+      this.tagsService.updateTag(this.editingTag);
+      this.editingTag = null;
+    }
   }
 }

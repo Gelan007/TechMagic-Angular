@@ -2,6 +2,9 @@
   <div class="product-card__item">
     <div class="product-card__content">
       <h3 class="product-card__title">{{product.name}}</h3>
+      <div class="product-card__tags">
+        <app-tag-view [text]="tag.name" [color]="tag.color" *ngFor="let tag of product.tags"></app-tag-view>
+      </div>
       <div class="product-card__price">Price: <span>{{product.price | currency}}</span></div>
       <div class="product-card__description">Description: <span>{{ product.description.length > 150 ? (product.description | slice:0:150) + '...' : product.description }}</span></div>
     </div>
