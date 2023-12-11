@@ -1,28 +1,41 @@
-import { Injectable } from '@angular/core';
-import {ITag, Tag} from "../components/tag/tag.model";
+import {BehaviorSubject, map} from "rxjs";
+import {ITag} from "../components/tag/tag.model";
+import {Injectable} from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TagsService {
-  private tags: ITag[] = [{id: 1, name: 'laptops', color: 'blue'},{id: 1, name: 'iphone', color: 'red'}, ];
+  private _tagsSubject = new BehaviorSubject<ITag[]>([]);
+  tags$ = this._tagsSubject.asObservable();
+  private _editingTagSubject = new BehaviorSubject<ITag | null>(null);
+  editingTag$ = this._editingTagSubject.asObservable();
 
-  public getTags(): ITag[] {
-    return this.tags;
+  constructor() {}
+
+  loadTags(tags: ITag[]) {
+    this._tagsSubject.next(tags);
   }
 
-  public createTag(tag: ITag) {
-    this.tags.push(tag);
+  editTag(tag: ITag) {
+    this._editingTagSubject.next(tag);
   }
 
-  public updateTag(updatedTag: ITag) {
-    const index: number = this.tags.findIndex((tag) => tag === updatedTag);
+  updateTag(updatedTag: ITag) {
+    const tags = this._tagsSubject.value;
+    const index = tags.findIndex((tag) => tag.name === updatedTag.name);
+
     if (index !== -1) {
-      this.tags[index] = updatedTag;
+      tags[index] = updatedTag;
+      this._tagsSubject.next([...tags]);
+      this._editingTagSubject.next(null);
     }
   }
 
-  public deleteTag(tag: ITag) {
-    this.tags = this.tags.filter((t) => t !== tag);
+  deleteTag(tag: ITag) {
+    const tags = this._tagsSubject.value;
+    const filteredTags = tags.filter((t) => t.name !== tag.name);
+    this._tagsSubject.next(filteredTags);
   }
+
 }

@@ -1,1 +1,23 @@
-<p>product-detail works!</p>
+<div class="product-detail" *ngIf="product">
+  <div class="product-detail__main-content">
+    <div class="content">
+      <h3 class="content__title">{{product.name}}</h3>
+      <div class="content__tag">
+        <div class="content__tag-container" *ngFor="let tag of product.tags">
+          <app-tag-view [text]="tag.name" [color]="tag.color"></app-tag-view>
+        </div>
+      </div>
+      <div class="content__description"><b>Description: </b> <span>{{product.description}}</span></div>
+      <div class="content__price"><b>Price: </b> <span>{{product.price | currency}}</span></div>
+      <div class="button-red">
+        <app-button-red [buttonText]="'Delete product'" (click)="deleteProduct()"></app-button-red>
+      </div>
+    </div>
+    <div class="picture">
+      <img [src]="product.img" [alt]="product.name">
+    </div>
+  </div>
+  <div class="product-detail__button">
+    <app-button-blue [buttonText]="'Back'" (click)="navigateToProductList()"></app-button-blue>
+  </div>
+</div>

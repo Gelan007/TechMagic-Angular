@@ -1,5 +1,10 @@
-<div>
-  <h2>Tag Management</h2>
-  <app-tag-list [tags]="tags" (edit)="editTag($event)" (delete)="deleteTag($event)"></app-tag-list>
-  <app-tag-edit *ngIf="editingTag" [tag]="editingTag" (save)="saveTag($event)"></app-tag-edit>
+<div class="tag-management">
+  <h2 class="tag-management__title">Tag Management</h2>
+  <div class="tag-management__top-block">
+    <div class="button-back">
+      <app-button-blue [buttonText]="'Back'" (click)="navigateToProductList()"></app-button-blue>
+    </div>
+  </div>
+  <app-tag-edit></app-tag-edit>
+  <app-tag-list></app-tag-list>
 </div>

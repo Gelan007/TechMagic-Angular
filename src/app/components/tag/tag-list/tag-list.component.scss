@@ -1,0 +1,64 @@
+.tag-list {
+  &__title {}
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 10px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid teal;
+  }
+}
+
+.product-title {
+  display: flex;
+  align-items: center;
+  &__id {
+    margin-right: 4px;
+    color: teal;
+  }
+  &__text {}
+}
+
+.product-tags {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 3px;
+  &__item {}
+
+  &__buttons {
+    display: flex;
+    margin: 2px 1px 10px;
+  }
+}
+
+.button-reset {
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.delete-button {
+  color: red;
+}
+
+.tag-creation {
+  margin-bottom: 30px;
+
+  &__item {
+    &>*:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}

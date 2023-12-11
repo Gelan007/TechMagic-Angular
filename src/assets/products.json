@@ -1,0 +1,396 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop Acer Aspire 5 A515-56-5113",
+    "description": "The Acer Aspire 5 A515-56-5113 is a powerful and sleek laptop. It features a 15.6-inch Full HD display, 11th Gen Intel Core i5 processor, 16GB RAM, and a 512GB SSD. This laptop provides a seamless computing experience for both work and entertainment. Explore the world of technology with Acer!",
+    "price": 799,
+    "img": "https://files.foxtrot.com.ua/PhotoNew/img_0_58_17603_0.jpg",
+    "tags": [
+      {
+        "name": "Laptop",
+        "color": "rgb(87, 115, 153)"
+      },
+      {
+        "name": "Acer",
+        "color": "rgb(87, 115, 153)"
+      },
+      {
+        "name": "Aspire",
+        "color": "rgb(87, 115, 153)"
+      },
+      {
+        "name": "Intel",
+        "color": "rgb(87, 115, 153)"
+      },
+      {
+        "name": "SSD",
+        "color": "rgb(87, 115, 153)"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Smartphone Samsung Galaxy S21",
+    "description": "Experience the cutting-edge technology with the Samsung Galaxy S21. This flagship smartphone boasts a stunning 6.2-inch Dynamic AMOLED display, powerful Exynos 2100 processor, triple-camera setup, and 128GB of storage. Elevate your mobile experience with the Galaxy S21. Capture breathtaking moments and stay connected with style.",
+    "price": 999,
+    "img": "https://hotline.ua/img/tx/403/4033839385.jpg",
+    "tags": [
+      {
+        "name": "Smartphone",
+        "color": "rgb(29, 185, 84)"
+      },
+      {
+        "name": "Samsung",
+        "color": "rgb(0, 81, 186)"
+      },
+      {
+        "name": "Galaxy",
+        "color": "rgb(0, 81, 186)"
+      },
+      {
+        "name": "Exynos",
+        "color": "rgb(29, 185, 84)"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Tablet Apple iPad Pro 12.9 (2021)",
+    "description": "Unleash your creativity with the Apple iPad Pro 12.9. Featuring a stunning Liquid Retina XDR display, M1 chip, and 256GB of storage, this tablet is a powerhouse for professionals and creative enthusiasts. Take your productivity to new heights with the iPad Pro. Immerse yourself in the world of digital art and productivity.",
+    "price": 1099,
+    "img": "https://stylus.ua/thumbs/568x568/c4/80/1906731.jpeg",
+    "tags": [
+      {
+        "name": "Tablet",
+        "color": "rgb(255,10,92)"
+      },
+      {
+        "name": "Apple",
+        "color": "rgb(0, 128, 0)"
+      },
+      {
+        "name": "iPad",
+        "color": "rgb(255, 0, 0)"
+      },
+      {
+        "name": "M1",
+        "color": "rgb(0, 128, 0)"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Laptop Dell XPS 13 Pro",
+    "description": "The Dell XPS 13 is a compact and powerful laptop. With a 13.4-inch InfinityEdge display, 11th Gen Intel Core i7 processor, 16GB RAM, and a 512GB SSD, this laptop delivers exceptional performance in a slim form factor. Elevate your computing experience with Dell.",
+    "price": 1299,
+    "img": "https://pimcdn.sharafdg.com/cdn-cgi/image/width=600,height=600,fit=pad/images/S200728028_1?1689637368",
+    "tags": [
+      {
+        "name": "Laptop",
+        "color": "rgb(0, 0, 255)"
+      },
+      {
+        "name": "Dell",
+        "color": "rgb(255,157,0)"
+      },
+      {
+        "name": "XPS",
+        "color": "rgb(0, 0, 255)"
+      },
+      {
+        "name": "Intel",
+        "color": "rgb(255,157,0)"
+      },
+      {
+        "name": "SSD",
+        "color": "rgb(0, 0, 255)"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Smartphone iPhone 13 Pro",
+    "description": "Discover the excellence of the iPhone 13 Pro. This Apple smartphone features a ProMotion XDR display, A15 Bionic chip, triple-camera system with ProRAW and ProRes video recording, and up to 1TB of storage. Capture, edit, and enjoy your moments with the iPhone 13 Pro.",
+    "price": 1199,
+    "img": "https://estore.ua/media/catalog/product/cache/8/image/650x650/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-13-pro-max-gold-select_1.png",
+    "tags": [
+      {
+        "name": "Smartphone",
+        "color": "rgb(29, 185, 84)"
+      },
+      {
+        "name": "Apple",
+        "color": "rgb(0, 128, 0)"
+      },
+      {
+        "name": "iPhone",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "name": "Pro",
+        "color": "rgb(0, 128, 128)"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Tablet Samsung Galaxy Tab S7+",
+    "description": "Immerse yourself in entertainment with the Samsung Galaxy Tab S7+. Featuring a 12.4-inch Super AMOLED display, Snapdragon 865+ processor, and S Pen support, this tablet is perfect for productivity and creativity. Experience cinematic viewing and powerful performance with the Galaxy Tab S7+.",
+    "price": 849,
+    "img": "https://images.prom.ua/4907230151_w640_h640_planshet-samsung-galaxy.jpg",
+    "tags": [
+      {
+        "name": "Tablet",
+        "color": "rgb(255,10,92)"
+      },
+      {
+        "name": "Samsung",
+        "color": "rgb(0, 81, 186)"
+      },
+      {
+        "name": "Galaxy",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "name": "Snapdragon",
+        "color": "rgb(255, 165, 0)"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Laptop ASUS ROG Zephyrus G14",
+    "description": "Unleash gaming prowess with the ASUS ROG Zephyrus G14. This gaming laptop features a 14-inch QHD display, AMD Ryzen 9 processor, NVIDIA GeForce RTX 3060 GPU, and 1TB SSD. Dominate the gaming arena with the power of Zephyrus G14.",
+    "price": 1499,
+    "img": "https://www.ogogo.net.ua/wp-content/uploads/2023/03/ASUS-G16-G614-1.jpg",
+    "tags": [
+      {
+        "name": "Laptop",
+        "color": "rgb(148, 0, 211)"
+      },
+      {
+        "name": "ASUS",
+        "color": "rgb(255, 20, 147)"
+      },
+      {
+        "name": "ROG",
+        "color": "rgb(148, 0, 211)"
+      },
+      {
+        "name": "Gaming",
+        "color": "rgb(255, 20, 147)"
+      },
+      {
+        "name": "AMD",
+        "color": "rgb(255, 165, 0)"
+      },
+      {
+        "name": "NVIDIA",
+        "color": "rgb(0, 0, 0)"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Smartphone Google Pixel 6",
+    "description": "Explore the innovative features of the Google Pixel 6. This Android smartphone boasts a 6.4-inch OLED display, Google Tensor processor, dual-camera system, and the latest Android experience. Capture stunning photos and stay connected with the Pixel 6.",
+    "price": 699,
+    "img": "https://pixophone.com/image/cache/catalog/product-touch/3/7e5ksuu7bpfn0j465ehzbh33ldtukv5i-600x600.jpg",
+    "tags": [
+      {
+        "name": "Smartphone",
+        "color": "rgb(29, 185, 84)"
+      },
+      {
+        "name": "Google",
+        "color": "rgb(0, 0, 128)"
+      },
+      {
+        "name": "Pixel",
+        "color": "rgb(255, 69, 0)"
+      },
+      {
+        "name": "Android",
+        "color": "rgb(0, 0, 128)"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Tablet Microsoft Surface Pro 8",
+    "description": "Enhance your productivity with the Microsoft Surface Pro 8. This 2-in-1 tablet features a 13-inch PixelSense display, Intel Core i5 processor, and up to 16GB RAM. Transform your workflow with the versatility of the Surface Pro 8.",
+    "price": 1099,
+    "img": "https://content1.rozetka.com.ua/goods/images/original/259977223.jpg",
+    "tags": [
+      {
+        "name": "Tablet",
+        "color": "rgb(255,10,92)"
+      },
+      {
+        "name": "Microsoft",
+        "color": "rgb(255, 0, 0)"
+      },
+      {
+        "name": "Surface",
+        "color": "rgb(0, 128, 128)"
+      },
+      {
+        "name": "Intel",
+        "color": "rgb(255, 0, 0)"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Laptop HP Spectre x360",
+    "description": "Experience the elegance and power of the HP Spectre x360. This convertible laptop features a 13.3-inch 4K OLED display, Intel Core i7 processor, 16GB RAM, and 1TB SSD. Elevate your multimedia and productivity with the Spectre x360.",
+    "price": 1399,
+    "img": "https://content1.rozetka.com.ua/goods/images/original/259977223.jpg",
+    "tags": [
+      {
+        "name": "Laptop",
+        "color": "rgb(0, 0, 255)"
+      },
+      {
+        "name": "HP",
+        "color": "rgb(165, 42, 42)"
+      },
+      {
+        "name": "Spectre",
+        "color": "rgb(255, 69, 0)"
+      },
+      {
+        "name": "Convertible",
+        "color": "rgb(0, 128, 0)"
+      },
+      {
+        "name": "Intel",
+        "color": "rgb(255, 69, 0)"
+      },
+      {
+        "name": "SSD",
+        "color": "rgb(0, 0, 255)"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Smartphone OnePlus 9 Pro",
+    "description": "Immerse yourself in speed and performance with the OnePlus 9 Pro. This flagship smartphone features a 6.7-inch Fluid AMOLED display, Snapdragon 888 processor, Hasselblad quad-camera system, and Warp Charge 65T. Redefine your mobile experience with the OnePlus 9 Pro.",
+    "price": 899,
+    "img": "https://stylus.ua/thumbs/568x568/3a/86/1545807.png",
+    "tags": [
+      {
+        "name": "Smartphone",
+        "color": "rgb(29, 185, 84)"
+      },
+      {
+        "name": "OnePlus",
+        "color": "rgb(220, 20, 60)"
+      },
+      {
+        "name": "9 Pro",
+        "color": "rgb(0, 128, 128)"
+      },
+      {
+        "name": "Snapdragon",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "name": "Hasselblad",
+        "color": "rgb(255, 69, 0)"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Tablet Lenovo Tab P11 Pro",
+    "description": "Unleash creativity with the Lenovo Tab P11 Pro. This premium Android tablet features an 11.5-inch 2K OLED display, Snapdragon 730G processor, and JBL speakers. Elevate your entertainment and productivity with the Tab P11 Pro.",
+    "price": 599,
+    "img": "https://stylus.ua/thumbs/568x568/3a/86/1545807.png",
+    "tags": [
+      {
+        "name": "Tablet",
+        "color": "rgb(255,10,92)"
+      },
+      {
+        "name": "Lenovo",
+        "color": "rgb(0, 0, 128)"
+      },
+      {
+        "name": "Tab",
+        "color": "rgb(0, 128, 128)"
+      },
+      {
+        "name": "Android",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "name": "OLED",
+        "color": "rgb(255, 165, 0)"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Laptop Razer Blade 15",
+    "description": "Dominate the gaming world with the Razer Blade 15. This gaming laptop features a 15.6-inch 4K OLED display, Intel Core i9 processor, NVIDIA GeForce RTX 3080 GPU, and 1TB SSD. Immerse yourself in gaming excellence with the Razer Blade 15.",
+    "price": 2499,
+    "img": "https://cdn.tehnoezh.ua/0/0/0/1/3/2/6/0/6/000132606_545_545.jpeg",
+    "tags": [
+      {
+        "name": "Laptop",
+        "color": "rgb(0, 0, 255)"
+      },
+      {
+        "name": "Razer",
+        "color": "rgb(255, 69, 0)"
+      },
+      {
+        "name": "Blade",
+        "color": "rgb(255, 20, 147)"
+      },
+      {
+        "name": "Gaming",
+        "color": "rgb(255, 20, 147)"
+      },
+      {
+        "name": "Intel",
+        "color": "rgb(255, 69, 0)"
+      },
+      {
+        "name": "NVIDIA",
+        "color": "rgb(0, 0, 0)"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Smartphone Xiaomi Mi 11",
+    "description": "Experience innovation with the Xiaomi Mi 11. This flagship smartphone features a 6.81-inch AMOLED display, Snapdragon 888 processor, triple-camera setup, and Harman Kardon tuned speakers. Stay ahead with the Mi 11.",
+    "price": 799,
+    "img": "https://cdn11.bigcommerce.com/s-ss31ap/images/stencil/1280x1280/products/7840/29849/s-l1600__35674.1630732177.jpg?c=2",
+    "tags": [
+      {
+        "name": "Smartphone",
+        "color": "rgb(29, 185, 84)"
+      },
+      {
+        "name": "Xiaomi",
+        "color": "rgb(220, 20, 60)"
+      },
+      {
+        "name": "Mi 11",
+        "color": "rgb(255, 69, 0)"
+      },
+      {
+        "name": "Snapdragon",
+        "color": "rgb(0, 0, 0)"
+      },
+      {
+        "name": "Harman Kardon",
+        "color": "rgb(255, 165, 0)"
+      }
+    ]
+  }
+]
