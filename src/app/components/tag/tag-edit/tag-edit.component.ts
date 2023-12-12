@@ -20,8 +20,12 @@ export class TagEditComponent implements OnInit {
   }
 
   saveTag(): void {
+    if(this.editingTag && this.editingTag?.name.length < 2) {
+      alert("Name is invalid")
+      return
+    }
     let confirmation = confirm(`Are you sure you want to edit tag ${this.editingTag?.name}?`)
-    if (this.editingTag && confirmation) {
+    if (this.editingTag && this.editingTag?.name.length >= 2 && confirmation) {
       this.tagsService.updateTag(this.editingTag);
       this.editingTag = null;
     }

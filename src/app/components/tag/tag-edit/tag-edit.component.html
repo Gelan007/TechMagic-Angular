@@ -4,7 +4,13 @@
     <div class="tag-edit__form">
       <div class="tag-edit__name">
         <label for="tagName">Name:</label>
-        <input [(ngModel)]="editingTag.name" id="tagName" *ngIf="editingTag" maxlength="15"/>
+        <input [(ngModel)]="editingTag.name" id="tagName" #name="ngModel" required minlength="2" maxlength="15"/>
+        <div *ngIf="name.invalid" class="form-errors">
+          <div *ngIf="name.errors?.['required']" >Name is required.</div>
+          <div *ngIf="name.errors?.['minlength']">
+            Name must be at least 2 characters long.
+          </div>
+        </div>
       </div>
       <div class="tag-edit__color">
         <label for="tagColor">Color: {{editingTag.color}}</label>

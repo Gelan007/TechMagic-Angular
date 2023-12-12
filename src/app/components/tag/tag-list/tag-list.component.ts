@@ -35,8 +35,10 @@ export class TagListComponent implements OnInit {
   }
 
   public addTagForProduct(productId: number): void {
-    this.productsService.addNewTagToProduct(this.tag, productId)
-    this.tag = new Tag('', '')
+    if(this.tag?.name.length >= 2) {
+      this.productsService.addNewTagToProduct(this.tag, productId)
+      this.tag = new Tag('', '')
+    }
   }
 
 }
