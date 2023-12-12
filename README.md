@@ -1,27 +1,46 @@
-# SimpleAngularApp
+# Angular Products Management App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.  
 
-## Development server
+This is a simple Angular web application designed to manage a list of electronic products and their associated tags. Users can view a list of products, access detailed information about each product, and perform actions such as creating, updating, and deleting products and tags. The application also allows users to filter products by tags.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
+- View a list of electronic products with associated tags.
+- Access detailed information about each product, including tags, description, and price.
+- Create new products and tags.
+- Update existing products and tags.
+- Delete products and tags.
+- Filter products by tags.
+- Search for products by name.
 
-## Code scaffolding
+## Getting Started
+Follow these instructions to run the application locally:  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone the repository to your local machine:
+```
+git clone https://github.com/your-username/angular-products-management.git
+cd angular-products-management
+```
+2. Install the project dependencies:
+```
+npm install
+```
+3. Run the application:
+```
+npm start
+```
+Open your browser and navigate to http://localhost:4200/ to view the application.  
 
-## Build
+## Data Source
+The application simulates data retrieval from a server by using a local **products.json** file located in the **assets** folder. The electronic products are stored in this JSON file.  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Code Structure
+The project follows a modular structure:
+- Components: The components folder contains three main subfolders: product, tag, and UI. The UI folder includes reusable components such as buttons.
+- Services: The services folder contains services for managing business logic related to products and tags. Local data is updated and deleted within the application.
+- Design: The design is responsive, adapting to different screen sizes.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Notable Decisions
+- UUID Generation: The UUID package is used to generate unique identifiers for tags.
+- Validation: Basic field validation is implemented.
+- Confirmation Dialogs: Confirmation dialogs are provided before critical actions like deleting a product.
