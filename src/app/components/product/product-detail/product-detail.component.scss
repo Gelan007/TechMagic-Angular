@@ -45,7 +45,9 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
-  &-container {}
+  &-container {
+    margin-right: 3px;
+  }
 }
 
 .button-red {

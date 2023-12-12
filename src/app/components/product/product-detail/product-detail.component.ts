@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {IProduct} from "../product.model";
 import {ProductsService} from "../../../services/products.service";
 
+
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
@@ -28,6 +29,12 @@ export class ProductDetailComponent implements OnInit {
     if(this.product) {
       this.navigateToProductList()
       this.productService.deleteProduct(this.product.id)
+    }
+  }
+  public confirmDeleteProduct(): void {
+    let confirmation = confirm(`Are you sure you want to delete ${this.product?.name}?`)
+    if (this.product && confirmation) {
+      this.deleteProduct();
     }
   }
 

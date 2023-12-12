@@ -56,10 +56,14 @@
 
 .tag-creation {
   margin-bottom: 30px;
-
   &__item {
     &>*:not(:last-child) {
       margin-bottom: 8px;
+    }
+  }
+  &__color {
+    & label {
+      margin-right: 4px;
     }
   }
 }

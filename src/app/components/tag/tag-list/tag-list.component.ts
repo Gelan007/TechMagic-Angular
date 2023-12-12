@@ -28,7 +28,10 @@ export class TagListComponent implements OnInit {
   }
 
   deleteTag(tag: ITag): void {
-    this.productsService.deleteTag(tag);
+    let confirmation = confirm(`Are you sure you want to delete tag ${tag.name}?`)
+    if (this.tag && confirmation) {
+      this.productsService.deleteTag(tag);
+    }
   }
 
   public addTagForProduct(productId: number): void {

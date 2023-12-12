@@ -20,7 +20,8 @@ export class TagEditComponent implements OnInit {
   }
 
   saveTag(): void {
-    if (this.editingTag) {
+    let confirmation = confirm(`Are you sure you want to edit tag ${this.editingTag?.name}?`)
+    if (this.editingTag && confirmation) {
       this.tagsService.updateTag(this.editingTag);
       this.editingTag = null;
     }
