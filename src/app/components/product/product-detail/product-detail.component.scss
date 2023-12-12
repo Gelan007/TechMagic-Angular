@@ -52,3 +52,34 @@
   margin-top: auto;
   width: 180px;
 }
+
+@media(max-width: 990px){
+  .product-detail {
+    &__main-content {
+      display: flex;
+      flex-direction: column;
+      &>* {
+        margin: 5px 5px;
+      }
+    }
+    &__button {
+      margin-top: 10px;
+    }
+  }
+  .button-red {
+    margin: 15px 0 5px;
+  }
+  .content__tag {
+    flex-wrap: wrap;
+  }
+}
+
+@media(max-width: 990px){
+  .content {
+    font-size: 18px;
+
+    &__title {
+      font-size: 25px;
+    }
+  }
+}
