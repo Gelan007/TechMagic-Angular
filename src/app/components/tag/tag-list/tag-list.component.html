@@ -4,7 +4,13 @@
     <div class="tag-creation__item">
       <div class="tag-creation__name">
         <label for="tag-name">Tag name: </label>
-        <input [(ngModel)]="tag.name" id="tag-name"/>
+        <input [(ngModel)]="tag.name" id="tag-name" #name="ngModel" required minlength="2" maxlength="15"/>
+        <div *ngIf="name.invalid" class="form-errors">
+          <div *ngIf="name.errors?.['required']" >Name is required.</div>
+          <div *ngIf="name.errors?.['minlength']">
+            Name must be at least 2 characters long.
+          </div>
+        </div>
       </div>
       <div class="tag-creation__color">
         <label for="tag-color">Tag color: {{tag.color}}</label>

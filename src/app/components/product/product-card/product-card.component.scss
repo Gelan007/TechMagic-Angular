@@ -71,3 +71,19 @@
 }
 
 
+@media(max-width: 1000px){
+  .product-card {
+    &__title {
+      font-size: 22px;
+    }
+    &__price {
+      font-size: 17px;
+      & span {
+        font-size: 20px;
+      }
+    }
+    &__description {
+      font-size: 17px;
+    }
+  }
+}

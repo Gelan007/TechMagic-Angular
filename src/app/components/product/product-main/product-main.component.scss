@@ -24,12 +24,21 @@
   &__right-block {
     display: flex;
     flex-direction: column;
-    flex: 0 1 50%;
+    flex: 0 1 80%;
     &>*:not(:last-child) {
       margin-bottom: 5px;
     }
     &-item {
-
+      display: flex;
+      align-items: flex-start;
+      &__tag-color {
+        display: flex;
+        align-items: flex-start;
+        margin-left: 5px;
+        & label {
+          margin-right: 3px;
+        }
+      }
     }
   }
   &__buttons {
@@ -49,8 +58,9 @@
   color: #577399;
   cursor: pointer;
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   text-decoration: underline;
+  display: inline-block;
   &:hover {
     color: #316a8f;
   }
@@ -62,4 +72,38 @@
 
 .form-errors {
   color: red;
+}
+
+
+@media(max-width: 690px){
+  .product-main {
+    &__top-block {
+      padding: 15px 4px 30px 5px;
+    }
+  }
+  .product-creation {
+    &__right-block {
+      &>*:not(:last-child) {
+        margin-bottom: 12px;
+      }
+      &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        &__tag-color {
+          display: flex;
+          align-items: flex-start;
+          margin: 6px 0 0 0;
+          & label {
+            margin-right: 3px;
+          }
+        }
+        &__tag-name {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+      }
+    }
+  }
+
 }

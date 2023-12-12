@@ -13,7 +13,7 @@ import {Observable} from "rxjs";
 })
 export class TagListComponent implements OnInit {
   public products$: Observable<IProduct[]> = this.productsService.products$
-  public tag: ITag = new Tag('', '')
+  public tag: ITag = new Tag('', 'blue')
   constructor(private productsService: ProductsService, private tagsService: TagsService) {}
 
   ngOnInit(): void {
@@ -28,12 +28,17 @@ export class TagListComponent implements OnInit {
   }
 
   deleteTag(tag: ITag): void {
-    this.productsService.deleteTag(tag);
+    let confirmation = confirm(`Are you sure you want to delete tag ${tag.name}?`)
+    if (this.tag && confirmation) {
+      this.productsService.deleteTag(tag);
+    }
   }
 
   public addTagForProduct(productId: number): void {
-    this.productsService.addNewTagToProduct(this.tag, productId)
-    this.tag = new Tag('', '')
+    if(this.tag?.name.length >= 2) {
+      this.productsService.addNewTagToProduct(this.tag, productId)
+      this.tag = new Tag('', '')
+    }
   }
 
 }
