@@ -44,8 +44,8 @@ export class TagsService {
     tags.forEach(tag => {
       uniqueTagsMap.set(tag.name, tag);
     });
-    const uniqueTagsArray: ITag[] = Array.from(uniqueTagsMap.values());
-    return uniqueTagsArray;
+    const sortedUniqueTagsArray: ITag[] = Array.from(uniqueTagsMap.values()).sort((a, b) => a.name.localeCompare(b.name));
+    return sortedUniqueTagsArray;
   }
 
 }
